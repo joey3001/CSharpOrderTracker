@@ -9,7 +9,9 @@ namespace Tracker.Test
     [TestMethod]
     public void VendorConstructor_CreateAnInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor();
+      string vendorName = "Test Name";
+      Vendor newVendor = new Vendor(vendorName);
+
       Assert.AreEqual(typeof(Vendor), newVendor.GetType()); 
     }
     [TestMethod]
@@ -20,7 +22,7 @@ namespace Tracker.Test
 
       string result = newVendor.VendorName; 
 
-      Assert.AreEqual(vendorName, result); 
+      Assert.AreEqual("vendorName", result); 
     }
   }
 }
