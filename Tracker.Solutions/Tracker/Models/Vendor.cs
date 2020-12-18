@@ -18,5 +18,10 @@ namespace Tracker.Models
     {
       _instances.Clear(); 
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return new List<Vendor> {_instances[0]};
+    }
   }
 }

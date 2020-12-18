@@ -53,10 +53,10 @@ namespace Tracker.Test
       Vendor vendor1 = new Vendor(vendorName1);
       Vendor vendor2 = new Vendor(vendorName2);
 
-      List<Vendor> intendedList = new List<Vendor> {vendor1, vendor2}; 
       List<Vendor> result = Vendor.GetAll(); 
+      List<Vendor> intendedList = new List<Vendor> { vendor1 , vendor2 };
 
-      Assert.AreEqual(intendedList, result); 
+      CollectionAssert.AreEqual(intendedList, result); 
     }
   }
 }
