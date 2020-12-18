@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tracker.Models;
 
 namespace Tracker.Test
 {
@@ -9,7 +10,7 @@ namespace Tracker.Test
     public void VendorConstructor_CreateAnInstanceOfVendor_Vendor()
     {
       Vendor newVendor = new Vendor();
-      Assert.AreEqual(typeof(Vendor), newVendor.GetType()); 
+      Assert.AreEqual(typeof(string), newVendor.GetType()); 
     }
   }
 }
