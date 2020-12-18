@@ -14,6 +14,7 @@ namespace Tracker.Test
 
       Assert.AreEqual(typeof(Vendor), newVendor.GetType()); 
     }
+
     [TestMethod]
     public void GetName_ReturnsVendorName_String()
     {
@@ -23,6 +24,18 @@ namespace Tracker.Test
       string result = newVendor.VendorName; 
 
       Assert.AreEqual(vendorName, result); 
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_int()
+    {
+      int intendedId = 1; 
+      string vendorName = "Test Name";
+      Vendor newVendor = new Vendor(vendorName);
+
+      string result = newVendor.ID; 
+
+      Assert.AreEqual(intendedId, result); 
     }
   }
 }
