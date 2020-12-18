@@ -21,7 +21,7 @@ namespace Tracker.Models
 
     public static List<Vendor> GetAll()
     {
-      return new List<Vendor> {_instances[0]};
+      return _instances;
     }
   }
 }
