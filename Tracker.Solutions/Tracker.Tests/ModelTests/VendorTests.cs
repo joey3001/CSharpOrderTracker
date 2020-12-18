@@ -1,11 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System;
 using Tracker.Models;
 
 namespace Tracker.Test
 {
   [TestClass]
-  public class VendorTest
+  public class VendorTest : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreateAnInstanceOfVendor_Vendor()
     {
@@ -33,7 +40,7 @@ namespace Tracker.Test
       string vendorName = "Test Name";
       Vendor newVendor = new Vendor(vendorName);
 
-      string result = newVendor.ID; 
+      int result = newVendor.Id; 
 
       Assert.AreEqual(intendedId, result); 
     }
