@@ -71,7 +71,7 @@ namespace Tracker.Test
       Vendor intendedVendor = vendor2; 
       Vendor result = Vendor.Find(searchId); 
 
-      Assert.AreEqual(intendedVendor, result); 
+      Assert.AreEqual(intendedVendor, result);
     }
   }
 }
