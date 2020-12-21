@@ -10,7 +10,7 @@ namespace Tracker.Models
     {
       OrderTitle = orderTitle;
       OrderDescription = orderDescription; 
-      OrderPrice = 3; 
+      OrderPrice = orderPrice; 
     }
   }
 }
