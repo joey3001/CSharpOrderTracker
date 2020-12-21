@@ -97,5 +97,33 @@ namespace Tracker.Test
 
       Assert.AreEqual(intendedVendor, result);
     }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string orderTitle = "Test Title";
+      string orderDescription = "Test Description";
+      int orderPrice = 10;
+      string orderDate = "1/1/1900"; 
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
+
+      string orderTitle2 = "Test Title 2";
+      string orderDescription2 = "Test Description 2";
+      int orderPrice2 = 12;
+      string orderDate2 = "1/2/1900"; 
+      Order newOrder2 = new Order(orderTitle2, orderDescription2, orderPrice2, orderDate2);
+
+
+      List<Order> newOrderList = new List<Order> { newOrder };
+
+      string vendorName = "Test Name #1";
+      string vendorDescription = "Test Description #1"; 
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      newVendor.AddOrder(newOrder);
+      newVendor.AddOrder(newOrder2);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
   }
 }
