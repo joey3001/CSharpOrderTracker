@@ -17,7 +17,7 @@ namespace Tracker.Tests
       string orderDate = "1/1/1900"; 
 
       Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
-      
+
       Assert.AreEqual(typeof(Order), newOrder.GetType()); 
     }
     
@@ -72,7 +72,7 @@ namespace Tracker.Tests
       string orderDate = "1/1/1900"; 
       Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
 
-      int result = newOrder.OrderDate; 
+      string result = newOrder.OrderDate; 
 
       Assert.AreEqual(orderDate, result); 
     }
