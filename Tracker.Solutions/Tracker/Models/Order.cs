@@ -3,9 +3,10 @@ namespace Tracker.Models
 {
   public class Order
   {
-    public Order()
+    public string OrderTitle { get; set; }
+    public Order(string orderTitle)
     {
-      
+      OrderTitle = "blah";
     }
   }
 }
