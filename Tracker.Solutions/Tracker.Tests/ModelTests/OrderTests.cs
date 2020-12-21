@@ -103,6 +103,21 @@ namespace Tracker.Tests
 
       CollectionAssert.AreEqual(intendedList, result); 
     }
+    
+    [TestMethod]
+    public void Find_ReturnsOrderObjectById_Order()
+    {
+      string orderTitle = "Test Title";
+      string orderDescription = "Test Description";
+      int orderPrice = 10;
+      string orderDate = "1/1/1900"; 
+      int searchId = 1; 
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
+
+      Order result = Order.Find(searchId); 
+
+      Assert.AreEqual(newOrder, result); 
+    }
   }
 }
 
