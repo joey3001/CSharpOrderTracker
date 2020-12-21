@@ -12,7 +12,7 @@ namespace Tracker.Models
       OrderTitle = orderTitle;
       OrderDescription = orderDescription; 
       OrderPrice = orderPrice; 
-      OrderDate = "fail";
+      OrderDate = orderDate;
     }
   }
 }
