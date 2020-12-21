@@ -4,7 +4,15 @@
 
 @using Tracker.Models; 
 
+<h3>Vendor Name: @Model["vendor"].VendorName</h3> 
+<h3>Vendor Description: @Model["vendor"].VendorDescription</h3> 
+
 <h3>Here are all of the Orders currently placed with this Vendor</h3> 
+
+@if (@Model["orders"].Count == 0)
+{
+  <h3>You haven't added any Orders yet!</h3>
+} 
 
 <ol>
   @foreach (Order order in @Model["orders"])
