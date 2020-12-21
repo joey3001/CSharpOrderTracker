@@ -46,7 +46,7 @@ This application utilizes custom classes, namespaces, objects within objects, an
 #### To run the project using commands in the terminal : 
 
 1. Use the cd command to navigate to the "Tracker" directory. 
-2. Use the following command in your terminal program to compile the code : 
+2. Use the following command in your terminal program to restore the dependencies and tools of the project : 
 
             dotnet restore
 
