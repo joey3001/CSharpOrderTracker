@@ -8,7 +8,7 @@ namespace Tracker.Models
     public Order(string orderTitle, string orderDescription)
     {
       OrderTitle = orderTitle;
-      OrderDescription = "Fail"; 
+      OrderDescription = orderDescription; 
     }
   }
 }
