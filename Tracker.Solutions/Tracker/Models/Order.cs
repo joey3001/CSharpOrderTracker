@@ -19,7 +19,7 @@ namespace Tracker.Models
     }
     public static List<Order> GetAll() 
     {
-      return new List<Order> {_instances[0]};  
+      return _instances; 
     }
     public static void ClearAll()
     {
