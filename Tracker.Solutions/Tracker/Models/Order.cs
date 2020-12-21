@@ -4,9 +4,11 @@ namespace Tracker.Models
   public class Order
   {
     public string OrderTitle { get; set; }
-    public Order(string orderTitle)
+    //public string OrderDescription { get; set; }
+    public Order(string orderTitle) //string orderDescription)
     {
-      OrderTitle = "blah";
+      OrderTitle = orderTitle;
+      //OrderDescription = orderDescription; 
     }
   }
 }

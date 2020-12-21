@@ -12,15 +12,17 @@ namespace Tracker.Tests
     public void OrderConstructor_CreateAnInstanceOfOrder_Order()
     {
       string orderTitle = "Test Name";
-      Order newOrder = new Order(orderTitle); 
+      //string orderDescription = "Test Description";
+      Order newOrder = new Order(orderTitle); //orderDescription); 
       Assert.AreEqual(typeof(Order), newOrder.GetType()); 
     }
     
     [TestMethod]
-    public void GetTitle_ReturnsOrderTitle_String()
+    public void GetOrderTitle_ReturnsOrderTitle_String()
     {
       string orderTitle = "Test Name";
-      Order newOrder = new Order(orderTitle);
+      //string orderDescription = "Test Description";
+      Order newOrder = new Order(orderTitle); // orderDescription);
 
       string result = newOrder.OrderTitle; 
 
@@ -28,3 +30,15 @@ namespace Tracker.Tests
     }
   }
 }
+
+//  [TestMethod]
+//     public void GetOrderDescription_ReturnsOrderDescription_String()
+//     {
+//       string orderTitle = "Test Name";
+//       string orderDescription = "Test Description";
+//       Order newOrder = new Order(orderTitle, orderDescription);
+
+//       string result = newOrder.OrderDescription; 
+
+//       Assert.AreEqual(orderTitle, result); 
+//     }
