@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Tracker.Models;
+
+<h2>Vendors</h2>
+
+@if (@Model.Count == 0)
+{
+  <h3>You haven't added any Vendors yet!</h3>
+} 
+
+@foreach (Vendor vendor in Model)
+{
+  <h3><a href='/vendors/@vendor.Id'>@vendor.VendorName</a></h3>
+}
+
+<p><a href='/'>This will take you back to the Home page!</a></p>
