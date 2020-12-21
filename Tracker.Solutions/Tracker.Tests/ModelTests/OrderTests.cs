@@ -6,8 +6,13 @@ using System;
 namespace Tracker.Tests
 {
   [TestClass]
-  public class OrderTest
+  public class OrderTest : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+
     [TestMethod]
     public void OrderConstructor_CreateAnInstanceOfOrder_Order()
     {
@@ -92,7 +97,7 @@ namespace Tracker.Tests
       Order newOrder2 = new Order(orderTitle2, orderDescription2, orderPrice2, orderDate2);
       List<Order> intendedList = new List<Order> { newOrder1, newOrder2 };
 
-      string result = Order.GetAll(); 
+      List<Order> result = Order.GetAll(); 
 
       CollectionAssert.AreEqual(intendedList, result); 
     }
