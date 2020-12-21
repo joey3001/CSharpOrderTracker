@@ -11,18 +11,22 @@ namespace Tracker.Tests
     [TestMethod]
     public void OrderConstructor_CreateAnInstanceOfOrder_Order()
     {
-      string orderTitle = "Test Name";
+      string orderTitle = "Test Title";
       string orderDescription = "Test Description";
-      Order newOrder = new Order(orderTitle, orderDescription); 
+      int orderPrice = 10;
+
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
+
       Assert.AreEqual(typeof(Order), newOrder.GetType()); 
     }
     
     [TestMethod]
     public void GetOrderTitle_ReturnsOrderTitle_String()
     {
-      string orderTitle = "Test Name";
+      string orderTitle = "Test Title";
       string orderDescription = "Test Description";
-      Order newOrder = new Order(orderTitle, orderDescription);
+      int orderPrice = 10;
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
 
       string result = newOrder.OrderTitle; 
 
@@ -32,13 +36,27 @@ namespace Tracker.Tests
     [TestMethod]
     public void GetOrderDescription_ReturnsOrderDescription_String()
     {
-      string orderTitle = "Test Name";
+      string orderTitle = "Test Title";
       string orderDescription = "Test Description";
-      Order newOrder = new Order(orderTitle, orderDescription);
+      int orderPrice = 10;
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
 
       string result = newOrder.OrderDescription; 
 
       Assert.AreEqual(orderDescription, result); 
+    }
+
+    [TestMethod]
+    public void GetOrderPrice_ReturnsOrderPrice_int()
+    {
+      string orderTitle = "Test Title";
+      string orderDescription = "Test Description";
+      int orderPrice = 10;
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
+
+      int result = newOrder.OrderPrice; 
+
+      Assert.AreEqual(orderPrice, result); 
     }
   }
 }
