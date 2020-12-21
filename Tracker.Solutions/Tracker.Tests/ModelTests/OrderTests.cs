@@ -14,9 +14,10 @@ namespace Tracker.Tests
       string orderTitle = "Test Title";
       string orderDescription = "Test Description";
       int orderPrice = 10;
+      string orderDate = "1/1/1900"; 
 
-      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
-
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
+      
       Assert.AreEqual(typeof(Order), newOrder.GetType()); 
     }
     
@@ -26,7 +27,8 @@ namespace Tracker.Tests
       string orderTitle = "Test Title";
       string orderDescription = "Test Description";
       int orderPrice = 10;
-      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
+      string orderDate = "1/1/1900"; 
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
 
       string result = newOrder.OrderTitle; 
 
@@ -39,7 +41,8 @@ namespace Tracker.Tests
       string orderTitle = "Test Title";
       string orderDescription = "Test Description";
       int orderPrice = 10;
-      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
+      string orderDate = "1/1/1900"; 
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
 
       string result = newOrder.OrderDescription; 
 
@@ -52,11 +55,26 @@ namespace Tracker.Tests
       string orderTitle = "Test Title";
       string orderDescription = "Test Description";
       int orderPrice = 10;
-      Order newOrder = new Order(orderTitle, orderDescription, orderPrice); 
+      string orderDate = "1/1/1900"; 
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
 
       int result = newOrder.OrderPrice; 
 
       Assert.AreEqual(orderPrice, result); 
+    }
+
+    [TestMethod]
+    public void GetOrderDate_ReturnsDateOrderWasPlaced_string()
+    {
+      string orderTitle = "Test Title";
+      string orderDescription = "Test Description";
+      int orderPrice = 10;
+      string orderDate = "1/1/1900"; 
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate); 
+
+      int result = newOrder.OrderDate; 
+
+      Assert.AreEqual(orderDate, result); 
     }
   }
 }

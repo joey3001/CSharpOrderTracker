@@ -23,7 +23,7 @@ namespace Tracker.Test
     }
 
     [TestMethod]
-    public void GetName_ReturnsVendorName_String()
+    public void GetVendorName_ReturnsVendorName_String()
     {
       string vendorName = "Test Name";
       Vendor newVendor = new Vendor(vendorName);
