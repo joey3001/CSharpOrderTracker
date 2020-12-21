@@ -1,10 +1,10 @@
 # Joe's Vendor/Order Tracker 
 
-#### 12/11/2020
+#### 12/20/2020
 
 ### 📖 Description
 
-This application utilizes custom classes, namespaces, objects within objects, and static lists to associate Order objects with Vendor objects. This application also uses TDD & all functionality for the models are tested. The project additionally uses an MVC design pattern & Razor syntax to develop the UI. Fianlly 
+This application utilizes custom classes, namespaces, objects within objects, and static lists to associate Order objects with Vendor objects. This application also uses TDD & all functionality for the models are tested. The project additionally uses an MVC design pattern & Razor syntax to develop the UI. Finally, the project also uses Restful routing conventions. 
 
 #### By Joseph Nero 
 
@@ -38,19 +38,23 @@ This application utilizes custom classes, namespaces, objects within objects, an
 #### To clone this project using git commands in the terminal : 
 
 1. Open your terminal program and use the cd command to navigate to the directory in which you wish to clone this project. 
-2. Use [this link](https://github.com/joey3001/CSharpBakery) go to this project's repository on github. Click on the green button labeled "code" towards the right side of the page's center. Click on the HTTPS option and copy the presented URL. 
+2. Use [this link](https://github.com/joey3001/CSharpOrderTracker) go to this project's repository on github. Click on the green button labeled "code" towards the right side of the page's center. Click on the HTTPS option and copy the presented URL. 
 3. Use the following command in your terminal program to clone the repo :
 
-            git clone https://github.com/joey3001/CSharpBakery.git
+            git clone https://github.com/joey3001/CSharpOrderTracker.git
 
 #### To run the project using commands in the terminal : 
 
-1. Use the cd command to navigate to the "Bakery" directory. 
+1. Use the cd command to navigate to the "Tracker" directory. 
 2. Use the following command in your terminal program to compile the code : 
+
+            dotnet restore
+
+3. Use the following command in your terminal program to compile the code : 
 
             dotnet build 
 
-3. Next, use the following command in your terminal program to execute the compiled code : 
+4. Next, use the following command in your terminal program to execute the compiled code : 
 
             dotnet run 
 
@@ -75,7 +79,7 @@ This application utilizes custom classes, namespaces, objects within objects, an
 
 #### To download a file containing the contents of this repository to a location of your choice :  
 
-1. Use a web browser to go to the repository webpage at [this link.](https://github.com/joey3001/CSharpBakery)
+1. Use a web browser to go to the repository webpage at [this link.](https://github.com/joey3001/CSharpOrderTracker)
 2. Click on the green button labeled "code" towards the right side of the page's center. In the drop-down menu that opens, click on the button labeled "Download Zip."
 3. Once your download is complete, open the zipped file. Click on the button labeled "Extract All" at the top of your file explorer. 
 4. Choose the location in which you want to extract the files, and navigate to that location once this process is complete. 
@@ -97,7 +101,6 @@ If you have an issue, reach out to me at josephnero111@gmail.com
   * Git
   * Github 
   * Git Bash
-
 
 ### 📘 License
 
